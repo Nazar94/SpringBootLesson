@@ -3,9 +3,16 @@ pageEncoding="ISO-8859-1" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home Page</title>
+<title>Index View</title>
 </head>
 <body>
-<h2>Home Page</h2>
+<h2>Index View</h2>
+Age: ${age}
+<br>
+Username: ${username}
+<br>
+Price: ${price}
+<br>
+Status: ${status}
 </body>
 </html>
