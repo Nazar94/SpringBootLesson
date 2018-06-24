@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -11,29 +12,25 @@
 	<h2>Product information</h2>
 	<table border="1" cellpadding="2" cellspacing="2">
 	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Photo</th>
+		<th>Price</th>
+		<th>Quantity</th>
+		<th>Total</th>
+	</tr>
+	<c:forEach var="product" items="${products }">
+	<tr>
 		<td>ID</td>
 		<td>${product.id}</td>
-	</tr>
-	<tr>
-		<td>Name</td>
 		<td>${product.name}</td>
-	</tr>
-	<tr>
-		<td>Photo</td>
 		<td><img src="${pageContext.request.contextPath}/resources/images/${product.photo}"/></td>
-	</tr>
-	<tr>
-		<td>Price</td>
 		<td>${product.price}</td>
-	</tr>
-	<tr>
-		<td>Quantity</td>
 		<td>${product.quantity}</td>
-	</tr>
-	<tr>
-		<td>Total</td>
+
 		<td>${product.price*product.quantity}</td>
 	</tr>
+	</c:forEach>
 	</table>
 </body>
 </html>
